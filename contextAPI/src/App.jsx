@@ -1,14 +1,18 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Navbar } from './components/Navbar';
 import { Main } from './components/Main';
 import { Footer } from './components/Footer';
+import AuthContext from './contexts/AuthContext';
 
 function App() {
-  const[loggedIn, setLog] = useState(true);
+  // const[loggedIn, setLog] = useState(true);
   // console.log(loggedIn);
+
+  const {loggedIn} = useContext(AuthContext)
+  // console.log(val);
 
   return(
     <>
@@ -16,8 +20,9 @@ function App() {
             color:"violet"
         }}>App status:{loggedIn.toString()}</h3>
     <Navbar/>
-    <Main loggedIn = {loggedIn} setLog= {setLog}/>
+    <Main />
     <Footer />
+    
     </>
   )
   

@@ -1,7 +1,7 @@
 import { BottomMain } from "./BottomMain"
 import { TopMain } from "./TopMain"
 
-const Main = ({ loggedIn, setLog }) => {
+const Main = () => {
 
     return (
 
@@ -15,7 +15,7 @@ const Main = ({ loggedIn, setLog }) => {
 
         }}>
             <TopMain />
-            <BottomMain loggedIn={loggedIn} setLog={setLog} />
+            <BottomMain  />
         </div>
     )
 }

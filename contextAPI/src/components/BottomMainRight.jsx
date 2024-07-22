@@ -1,7 +1,10 @@
-function BottomMainRight({loggedIn, setLog}) {
+import { useContext } from "react"
+import AuthContext from "../contexts/AuthContext"
+
+function BottomMainRight() {
     // console.log(loggedIn+" Success");
 
-
+    const {loggedIn, setLog} = useContext(AuthContext)
     return (
         <>
         <h3>BottomMainright content</h3>

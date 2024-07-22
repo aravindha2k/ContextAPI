@@ -1,7 +1,7 @@
 import { BottomMainLeft } from "./BottomMainLeft"
 import { BottomMainRight } from "./BottomMainRight"
 
-function BottomMain({loggedIn, setLog}){
+function BottomMain(){
     return(
         <div style={{
             border:"1px solid blue",
@@ -11,7 +11,7 @@ function BottomMain({loggedIn, setLog}){
         }}>
         <h3>bot main content</h3>
         <BottomMainLeft />
-        <BottomMainRight loggedIn={loggedIn} setLog={setLog}/>
+        <BottomMainRight />
         </div>
     )
 }
